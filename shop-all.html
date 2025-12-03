@@ -141,6 +141,122 @@ color: #ee2b5b;
             background-color: var(--c-raspberry-hover);
             box-shadow: 0 6px 20px rgba(214, 47, 88, 0.3);
         }
+		
+		/* --- Section 8: Footer --- */
+    .main-footer {
+        background-color: var(--c-plum-dark); /* Anchoring Dark Color */
+        color: #FFDEE6; /* Light pink text */
+        padding: 5rem 0 2rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Subtle texture for footer */
+    .footer-texture {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: radial-gradient(circle at 80% 20%, #5C2A3B 0%, transparent 40%);
+        pointer-events: none;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .footer-brand h3 {
+        font-family: 'Unbounded', serif;
+        font-size: 1.8rem;
+        color: var(--c-white);
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+
+    .footer-brand p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        opacity: 0.8;
+        max-width: 300px;
+    }
+
+    .footer-heading {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        color: var(--c-raspberry);
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-link {
+        color: #FFDEE6;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        width: fit-content;
+    }
+
+    .footer-link:hover {
+        color: var(--c-white);
+        transform: translateX(5px);
+        text-shadow: 0 0 10px rgba(255, 194, 207, 0.3);
+    }
+
+    .social-row {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--c-white);
+        transition: all 0.3s var(--ease-elastic);
+    }
+
+    .social-icon:hover {
+        background: var(--c-raspberry);
+        border-color: var(--c-raspberry);
+        transform: scale(1.1) rotate(5deg);
+    }
+	
+	        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+    /* Footer Bottom Bar */
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        opacity: 0.6;
+        position: relative;
+        z-index: 1;
+    }
 
 </style>
 
@@ -428,56 +544,57 @@ color: #ee2b5b;
 </div>
 </main>
 <!-- Footer -->
-<footer class="w-full bg-white dark:bg-background-dark/50 mt-16 border-t border-secondary-pink dark:border-primary/20">
-<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-<div class="col-span-2 lg:col-span-1">
-<div class="flex items-center gap-2 text-primary mb-4">
-<span class="material-symbols-outlined text-3xl">local_florist</span>
-<h2 class="text-xl font-bold tracking-tight">Квiткарня</h2>
-</div>
-<p class="text-sm text-text-charcoal/70 dark:text-text-light/70">Clean, sustainable skincare for a natural glow.</p>
-</div>
-<div>
-<h4 class="font-bold mb-4">Shop</h4>
-<ul class="space-y-2 text-sm text-text-charcoal/80 dark:text-text-light/80">
-<li><a class="hover:text-primary" href="#">All Products</a></li>
-<li><a class="hover:text-primary" href="#">Cleansers</a></li>
-<li><a class="hover:text-primary" href="#">Serums</a></li>
-<li><a class="hover:text-primary" href="#">Moisturizers</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4">About</h4>
-<ul class="space-y-2 text-sm text-text-charcoal/80 dark:text-text-light/80">
-<li><a class="hover:text-primary" href="#">Our Story</a></li>
-<li><a class="hover:text-primary" href="#">Ingredients</a></li>
-<li><a class="hover:text-primary" href="#">Sustainability</a></li>
-<li><a class="hover:text-primary" href="#">Careers</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4">Support</h4>
-<ul class="space-y-2 text-sm text-text-charcoal/80 dark:text-text-light/80">
-<li><a class="hover:text-primary" href="#">Contact Us</a></li>
-<li><a class="hover:text-primary" href="#">FAQ</a></li>
-<li><a class="hover:text-primary" href="#">Shipping &amp; Returns</a></li>
-<li><a class="hover:text-primary" href="#">My Account</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-4">Stay Connected</h4>
-<p class="text-sm text-text-charcoal/80 dark:text-text-light/80 mb-3">Join our newsletter for exclusive offers.</p>
-<form class="flex">
-<input class="form-input w-full text-sm rounded-l-lg border-secondary-pink dark:border-primary/30 bg-white dark:bg-background-dark/50 focus:ring-primary focus:border-primary" placeholder="Your email" type="email"/>
-<button class="bg-primary text-white p-2.5 rounded-r-lg"><span class="material-symbols-outlined text-lg">arrow_forward</span></button>
-</form>
-</div>
-</div>
-<div class="mt-12 pt-8 border-t border-secondary-pink dark:border-primary/20 text-center text-sm text-text-charcoal/60 dark:text-text-light/60">
-<p>© 2025 Квiткарня. All Rights Reserved.</p>
-</div>
-</div>
+<footer class="main-footer">
+    <div class="footer-texture"></div>
+    <div class="container">
+        
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Квiткарня.</h3>
+                <p>ДАШУЛЯ ТОП.</p>
+            </div>
+
+            <div>
+                <span class="footer-heading">Меню</span>
+                <ul class="footer-links">
+                    <li><a href="shop-all.html" class="footer-link">Всі Товари</a></li>
+                    <li><a href="ourstory.html" class="footer-link">Наша Історія</a></li>
+                    <li><a href="journal.html" class="footer-link">Журнал</a></li>
+                    <li><a href="#" class="footer-link">Глосарій Інгредієнтів</a></li>
+                    <li><a href="#" class="footer-link">Подарункові Карти</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="footer-heading">Підтримка</span>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">FAQ та Доставка</a></li>
+                    <li><a href="#" class="footer-link">Повернення</a></li>
+                    <li><a href="#" class="footer-link">Контакти</a></li>
+                </ul>
+                
+                <div class="social-row">
+                    <a href="https://www.instagram.com/" target="_blank" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="social-icon" aria-label="TikTok">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" class="social-icon" aria-label="Pinterest">
+                         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2025 Квiткарня Co. Всі права захищено.</span>
+            <span style="display:flex; align-items:center; gap:0.5rem;">
+                Зроблено з <span style="color:var(--c-raspberry);">♥</span> Дар'єю.
+            </span>
+        </div>
+
+    </div>
 </footer>
 </div>
 </body></html>
